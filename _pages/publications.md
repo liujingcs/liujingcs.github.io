@@ -10,7 +10,7 @@ author_profile: true
 <b> AQD: Towards Accurate Quantized Object Detection </b> <br>
 Peng Chen, <b> Jing Liu* </b>, Bohan Zhuang, Mingkui Tan, Chunhua Shen <br>
 <i> arXiV preprint </i> <br>
-[PDF](https://arxiv.org/abs/2007.06919)
+[PDF](https://arxiv.org/abs/2007.06919) | 
 
 <b> Deep Transferring Quantization </b> <br>
 Zheng Xie*, Zhiquan Wen*, <b> Jing Liu* </b>, Zhiqiang Liu, Xixian Wu, Mingkui Tan <br>
