@@ -2,5 +2,26 @@
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICLR":
+  url: https://iclr.cc/
+
+"NeurIPS":
+  url: https://nips.cc/
+
+"TPAMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+
+"ICCV":
+  url: https://iccv2023.thecvf.com/
+
+"IJCAI":
+  url: https://www.ijcai.org/
+
+"CVPR":
+  url: https://cvpr.thecvf.com/
+
+"AAAI":
+  url: https://aaai.org/aaai-conference/
+
+"ECCV":
+  url: https://eccv2024.ecva.net/

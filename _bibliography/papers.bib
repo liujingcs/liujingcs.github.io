@@ -1,84 +1,241 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+@String{ICLR = {International Conference on Learning Representations (ICLR)}}
+@String{NeurIPS = {Conference on Neural Information Processing Systems (NeurIPS)}}
+@String{TPAMI = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)}}
+@String{ICCV= {International Conference on Computer Vision (ICCV)}}
+@String{IJCAI = {International Joint Conference on Artificial Intelligence (IJCAI)}}
+@String{CVPR = {Conference on Computer Vision and Pattern Recognition (CVPR)}}
+@String{AAAI = {AAAI Conference on Artificial Intelligence (AAAI)}}
+@String{ECCV = {European Conference on Computer Vision (ECCV)}}
 
-@book{einstein1956investigations,
+@inproceedings{
+liu2024qllm,
+title={{QLLM}: Accurate and Efficient Low-Bitwidth Quantization for Large Language Models},
+author={Liu, Jing and Gong, Ruihao and Wei, Xiuying and Dong, Zhiwei and Cai, Jianfei and Zhuang, Bohan},
+booktitle=ICLR,
+year={2024},
+arxiv={2310.08041},
+selected={true},
+abbr={ICLR},
+bibtex_show={true}
+}
+
+@inproceedings{
+he2024efficientdm,
+title={Efficient{DM}: Efficient Quantization-Aware Fine-Tuning of Low-Bit Diffusion Models},
+author={He, Yefei and Liu, Jing and Wu, Weijia and Zhou, Hong and Zhuang, Bohan},
+booktitle=ICLR,
+year={2024},
+arxiv={2310.03270},
+selected={true},
+abbr={ICLR},
+bibtex_show={true},
+price={Spotlight},
+long_price={Spotlight (top 5% of all submitted papers)},
+}
+
+@article{he2021pruning,
+  title={Pruning self-attentions into convolutional layers in single path},
+  author={He, Haoyu and Liu, Jing and Pan, Zizheng and Cai, Jianfei and Zhang, Jing and Tao, Dacheng and Zhuang, Bohan},
+  journal=TPAMI,
+  year={2023},
+  arxiv={2111.11802},
+  selected={true},
+  abbr={TPAMI},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@inproceedings{
+he2023ptqd,
+title={{PTQD}: Accurate Post-Training Quantization for Diffusion Models},
+author={Yefei He and Luping Liu and Jing Liu and Weijia Wu and Hong Zhou and Bohan Zhuang},
+booktitle=NeurIPS,
+year={2023},
+url={https://openreview.net/forum?id=Y3g1PV5R9l},
+arxiv={2305.10657},
+selected={true},
+abbr={NeurIPS},
+bibtex_show={true},
+code={https://github.com/ziplab/PTQD}
+}
+
+@inproceedings{he2023bivit,
+  title={BiViT: Extremely Compressed Binary Vision Transformers},
+  author={He, Yefei and Lou, Zhenyu and Zhang, Luoming and Liu, Jing and Wu, Weijia and Zhou, Hong and Zhuang, Bohan},
+  booktitle=ICCV,
+  pages={5651--5663},
+  year={2023},
+  arxiv={2211.07091},
+  selected={true},
+  abbr={ICCV},
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+  code={https://github.com/ThisisBillhe/BiViT}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
+@article{liu2023single,
+  title={Single-path bit sharing for automatic loss-aware model compression},
+  author={Liu, Jing and Zhuang, Bohan and Chen, Peng and Shen, Chunhua and Cai, Jianfei and Tan, Mingkui},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2023},
+  arxiv={2101.04935},
+  selected={true},
+  abbr={TPAMI},
+  bibtex_show={true},
+  doi={10.1109/TPAMI.2023.3275159}}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
+@inproceedings{ijcai2023p764,
+  title     = {A Survey on Efficient Training of Transformers},
+  author    = {Zhuang, Bohan and Liu, Jing and Pan, Zizheng and He, Haoyu and Weng, Yuetian and Shen, Chunhua},
+  booktitle = IJCAI,
+  pages     = {6823--6831},
+  year      = {2023},
+  note      = {Survey Track},
+  doi       = {10.24963/ijcai.2023/764},
+  arxiv={2302.01107},
+  selected={true},
+  abbr={IJCAI},
+  bibtex_show={true},
+}
+
+@InProceedings{He_2023_CVPR,
+    author    = {He, Haoyu and Cai, Jianfei and Pan, Zizheng and Liu, Jing and Zhang, Jing and Tao, Dacheng and Zhuang, Bohan},
+    title     = {Dynamic Focus-Aware Positional Queries for Semantic Segmentation},
+    booktitle = CVPR,
+    year      = {2023},
+    pages     = {11299-11308},
+    arxiv={2204.01244},
+    selected={true},
+    abbr={CVPR},
+    bibtex_show={true},
+}
+
+@inproceedings{liu2022ecoformer,
+ author = {Liu, Jing and Pan, Zizheng and He, Haoyu and Cai, Jianfei and Zhuang, Bohan},
+ booktitle = NeurIPS,
+ pages = {10295--10308},
+ title = {EcoFormer: Energy-Saving Attention with Linear Complexity},
+ volume = {35},
+ year = {2022},
+ arxiv={2209.09004},
+ selected={true},
+ abbr={NeurIPS},
+ bibtex_show={true},
+ price={Spotlight},
+ long_price={Spotlight (top 5% of all submitted papers)},
+ code={https://github.com/ziplab/EcoFormer}
+}
+
+@inproceedings{pan2022less,
+  title={Less is more: Pay less attention in vision transformers},
+  author={Pan, Zizheng and Zhuang, Bohan and He, Haoyu and Liu, Jing and Cai, Jianfei},
+  booktitle=AAAI,
+  volume={36},
+  number={2},
+  pages={2035--2043},
+  year={2022},
+  arxiv={2105.14217},
+  selected={true},
+  abbr={AAAI},
+  bibtex_show={true},
+  code={https://github.com/ziplab/LIT}
+}
+
+@InProceedings{Pan_2021_ICCV,
+    author    = {Pan, Zizheng and Zhuang, Bohan and Liu, Jing and He, Haoyu and Cai, Jianfei},
+    title     = {Scalable Vision Transformers With Hierarchical Pooling},
+    booktitle = ICCV,
+    year      = {2021},
+    pages     = {377-386},
+    arxiv={2103.10619},
+    selected={true},
+    abbr={ICCV},
+    bibtex_show={true},
+    code={https://github.com/ziplab/HVT}
+}
+
+@article{liu2021discrimination,
+  title={Discrimination-aware network pruning for deep model compression},
+  author={Liu, Jing and Zhuang, Bohan and Zhuang, Zhuangwei and Guo, Yong and Huang, Junzhou and Zhu, Jinhui and Tan, Mingkui},
+  journal=TPAMI,
+  volume={44},
   number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
+  pages={4035--4051},
+  year={2021},
+  arxiv={2001.01050},
+  selected={true},
+  abbr={TPAMI},
   bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+  code={https://github.com/SCUT-AILab/DCP}
+}
+
+@article{zhuang2021effective,
+  title={Effective training of convolutional neural networks with low-bitwidth weights and activations},
+  author={Zhuang*, Bohan and Tan*, Mingkui and Liu*, Jing and Liu, Lingqiao and Reid, Ian and Shen, Chunhua},
+  journal=TPAMI,
+  volume={44},
+  number={10},
+  pages={6140--6152},
+  year={2021},
+  arxiv={1908.04680},
+  selected={true},
+  abbr={TPAMI},
+  bibtex_show={true},
+  code={https://github.com/bohanzhuang/Towards-Effective-Low-bitwidth-Convolutional-Neural-Networks}
+}
+
+@InProceedings{Chen_2021_CVPR,
+    author    = {Chen*, Peng and Liu*, Jing and Zhuang, Bohan and Tan, Mingkui and Shen, Chunhua},
+    title     = {AQD: Towards Accurate Quantized Object Detection},
+    booktitle = CVPR,
+    year      = {2021},
+    pages     = {104-113},
+    arxiv={2007.06919},
+    selected={true},
+    abbr={CVPR},
+    bibtex_show={true},
+    price={Oral},
+    long_price={Oral Presentation (top 4% of all submitted papers)},
+    code={https://github.com/aim-uofa/model-quantization}
+}
+
+@inproceedings{xie2020deep,
+  title={Deep transferring quantization},
+  author={Xie*, Zheng and Wen*, Zhiquan and Liu*, Jing and Liu, Zhiqiang and Wu, Xixian and Tan, Mingkui},
+  booktitle=ECCV,
+  pages={625--642},
+  year={2020},
+  selected={true},
+  abbr={ECCV},
+  bibtex_show={true},
+  pdf={https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123530613.pdf},
+  code={https://github.com/xiezheng-cs/DTQ}
+}
+
+@inproceedings{xu2020generative,
+  title={Generative low-bitwidth data free quantization},
+  author={Xu*, Shoukai and Li*, Haokun and Zhuang*, Bohan and Liu, Jing and Cao, Jiezhang and Liang, Chuangrun and Tan, Mingkui},
+  booktitle=ECCV,
+  pages={1--17},
+  year={2020},
+  arxiv={2003.03603},
+  selected={true},
+  abbr={ECCV},
+  bibtex_show={true},
+  code={https://github.com/xushoukai/GDFQ}
+}
+
+@incollection{zhuang2018discrimination,
+title = {Discrimination-aware Channel Pruning for Deep Neural Networks},
+author = {Zhuang*, Zhuangwei and Tan*, Mingkui and Zhuang*, Bohan and Liu*, Jing and Guo, Yong and Wu, Qingyao and Huang, Junzhou and Zhu, Jinhui},
+booktitle = NeurIPS,
+pages = {881--892},
+year = {2018},
+arxiv={1810.11809},
+selected={true},
+abbr={NeurIPS},
+bibtex_show={true},
+code={https://github.com/SCUT-AILab/DCP}
 }

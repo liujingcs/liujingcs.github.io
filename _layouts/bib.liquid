@@ -34,6 +34,9 @@
           <abbr class="badge">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
+      {% if entry.price %}
+        <span class="award badge">{{entry.price}}</span>
+      {% endif %}
     </div>
   {% endif %}
 
@@ -151,6 +154,10 @@
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
+    </div>
+
+    <div class="long_price">
+        {{entry.long_price}}
     </div>
 
     <!-- Links/Buttons -->

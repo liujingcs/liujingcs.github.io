@@ -1,26 +1,32 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: bio_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
 news: true # includes a list of news items
-latest_posts: true # includes a list of the newest posts
+latest_posts: false # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a final-year Ph.D. student at Monash University, supervised by Asst. Prof. [Bohan Zhuang](https://scholar.google.com/citations?user=DFuDBBwAAAAJ&hl=en), Prof. [Jianfei Cai](https://scholar.google.com/citations?user=N6czCoUAAAAJ&hl=en), and Prof. [Chunhua Shen](https://scholar.google.com.au/citations?user=Ljk2BvIAAAAJ&hl=en). I am a member of [ZIP Lab](https://ziplab.github.io/). Prior to my Ph.D., I completed my master's degree at South China University of Technology, under the supervision of Prof. [Mingkui Tan](https://scholar.google.com.au/citations?user=EVsoTGkAAAAJ&hl=en).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My research focus on developing efficient AI. This involves optimizing AI algorithms for improving performance with reduced computational resources, aiming to make AI more accessible and sustainable for real-world applications. Some topics that I currently focus on:
+* Model compression and acceleration
+  * Quantization
+    * LLMs: [QLLM](https://arxiv.org/abs/2310.08041)
+    * Diffusion models: [EfficientDM](https://arxiv.org/abs/2310.03270), [PTQD](https://arxiv.org/abs/2305.10657), [TFMQ-DM](https://arxiv.org/abs/2311.16503)
+    * Vision Transformers: [BiViT](https://arxiv.org/abs/2211.07091)
+    * CNNs: [SAQ](https://arxiv.org/abs/2111.12273), [AQD](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_AQD_Towards_Accurate_Quantized_Object_Detection_CVPR_2021_paper.html), [ETLWA](https://ieeexplore.ieee.org/abstract/document/9454278), [GDFQ](https://link.springer.com/chapter/10.1007/978-3-030-58610-2_1), [DTQ](https://link.springer.com/chapter/10.1007/978-3-030-58598-3_37)
+  * Pruning
+    * Vision Transformers: [SPViT](https://arxiv.org/abs/2111.11802)
+    * CNNs: [DCP](https://ieeexplore.ieee.org/document/9384353)
+  * Joint pruning and quantization: [SBS](https://arxiv.org/abs/2101.04935)
+* Efficient attention: [EcoFormer](https://arxiv.org/abs/2209.09004)
