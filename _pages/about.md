@@ -30,3 +30,5 @@ My research focus on developing efficient AI. This involves optimizing AI algori
     * CNNs: [DCP](https://ieeexplore.ieee.org/document/9384353)
   * Joint pruning and quantization: [SBS](https://arxiv.org/abs/2101.04935)
 * Efficient attention: [EcoFormer](https://arxiv.org/abs/2209.09004)
+
+🌟🌟 <span style="color:red">I am currently on the industry job market.</span>  🌟🌟
