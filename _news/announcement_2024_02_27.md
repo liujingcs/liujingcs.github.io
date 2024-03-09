@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper is accepted by CVPR 2024!
+Two papers are accepted by CVPR 2024!
