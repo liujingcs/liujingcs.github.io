@@ -1,77 +1,80 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        <span class="font-weight-bold">{{ site.last_name }}</span>
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
+<div class="post academic-home">
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+    <section class="home-intro" aria-labelledby="home-name">
+      <div class="home-intro-copy">
+        <p class="home-eyebrow">{{ page.role }}</p>
+        <h1 id="home-name">
+          {{ site.first_name -}}
+          {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+          {{ site.last_name }}
+        </h1>
+        {% if page.research_focus %}
+          <p class="home-focus">{{ page.research_focus }}</p>
+        {% endif %}
+        {% if page.subtitle %}
+          <p class="desc">{{ page.subtitle }}</p>
+        {% endif %}
+        <div class="home-biography">{{ content }}</div>
+        {% if page.social %}
+          <div class="social home-social">
+            <div class="contact-icons">{% include social.liquid %}</div>
+            {% if site.contact_note %}
+              <div class="contact-note">{{ site.contact_note }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+      {% if page.profile %}
+        <aside class="home-portrait">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% assign profile_alt = site.first_name | append: ' ' | append: site.last_name %}
+            {% include figure.liquid path=profile_image_path class="home-portrait-image" sizes="(min-width: 768px) 240px, 160px" alt=profile_alt cache_bust=true %}
           {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid path = profile_image_path class = profile_image_class sizes = sizes alt = page.profile.image
-            cache_bust = true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+          <p class="portrait-caption">{{ page.affiliation }}</p>
+        </aside>
+      {% endif %}
+    </section>
 
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="home-section home-news" aria-labelledby="home-news-title">
+        <div class="home-section-heading">
+          <h2 id="home-news-title">News</h2>
+          <a class="home-section-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a>
+        </div>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
-    <!-- Latest posts -->
     {% if page.latest_posts %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <section class="home-section" aria-labelledby="home-posts-title">
+        <div class="home-section-heading">
+          <h2 id="home-posts-title">Latest posts</h2>
+          <a class="home-section-link" href="{{ '/blog/' | relative_url }}">All posts <span aria-hidden="true">↗</span></a>
+        </div>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
-    <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
-      </h2>
-      (* indicates equal contributions)
-      {% include selected_papers.liquid %}
+      <section class="home-section home-papers" aria-labelledby="home-papers-title">
+        <div class="home-section-heading">
+          <div>
+            <h2 id="home-papers-title">Publications</h2>
+            <p class="home-section-note">* indicates equal contributions</p>
+          </div>
+          <a class="home-section-link" href="{{ '/publications/' | relative_url }}">Full bibliography <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="publications">
+          {% bibliography --group_by year --query @*[selected=true]* %}
+        </div>
+      </section>
     {% endif %}
   </article>
 </div>
